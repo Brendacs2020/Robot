@@ -1,0 +1,55 @@
+- What is it?
+Robot framework is based in keyword-driven
+Don't utility programation language
+Your desenvolved is in Python
+It is open source and multiplatafoms
+Automatized tests and process RPA
+Easy to use syntax
+
+- Extent
+WEB
+API
+Mobile
+GUI
+
+- Interations
+Database: Server, Oracle
+Systems: Elasticsearch, Uptime, MongoDB
+
+- Writes
+Keyword-driven
+Data-driven
+Gherkin
+
+- Executation
+Local
+CI/CD
+Docker
+
+- Architecture
+Test Data >> Robot Framework >> Test Libraries >> System Under Test
+
+-Function
+Aceitable tests
+Fuctional tests
+System tests
+Interations between Systems
+RPA
+Back-end and UI Funcionals tests 
+
+- Strengths
+Free
+Open source
+Python
+Documentation
+Bigger Libraries
+Single plugin in VS Code
+Doesn't depend on other frameworks
+Integration for listerners
+
+- No use
+Unitary tests
+Performance tests
+
+- Keyword-driven
+Keyword represents a high-level action
