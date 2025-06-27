@@ -1,0 +1,13 @@
+robot -i menu amazon_tests.robot
+-i -> do all with menu tag
+
+robot -e menu amazon_tests.robot
+-e -> do all tests except contains menu tag
+
+robot -d Reporting amazon_tests.robot
+-d -> send all result for the field expecificated
+
+robot -v browser:firefox amazon_tests.robot
+-v -> chande a global variable for the expecificated
+
+

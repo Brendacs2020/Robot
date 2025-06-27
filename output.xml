@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.12.7 on win32)" generated="2025-06-24T14:36:16.138751" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Tests" source="C:\Users\beh00\OneDrive\Documents\GitHub\Robot\Amazon\Webtesting\amazon_tests.robot">
+<test id="s1-t1" name="Case test 02 - Search a product" line="17">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:16.570388" level="INFO">Opening browser 'Chrome' to base url 'http://www.amazon.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-24T14:36:16.569388" elapsed="3.076040"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-24T14:36:19.646426" elapsed="0.110543"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:19.757969" level="INFO">Executing JavaScript:
+document.body.style.zoom="80%"
+Without any arguments.</msg>
+<arg>document.body.style.zoom="80%"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-24T14:36:19.757969" elapsed="0.152995"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-06-24T14:36:19.911966" elapsed="1.494131"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${AMAZON_HOME}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T14:36:21.406097" elapsed="0.052025"/>
+</kw>
+<status status="PASS" start="2025-06-24T14:36:16.569388" elapsed="4.888734"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;GALAXY TAB S10 FE&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome de produto &quot;${PRODUCT}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:21.459099" level="INFO">Typing text 'GALAXY TAB S10 FE' into text field 'twotabsearchtextbox'.</msg>
+<arg>locator=${SEARCH}</arg>
+<arg>text=${PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T14:36:21.459099" elapsed="0.353331"/>
+</kw>
+<status status="PASS" start="2025-06-24T14:36:21.458122" elapsed="0.354308"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:21.814431" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T14:36:21.813431" elapsed="1.794405"/>
+</kw>
+<status status="PASS" start="2025-06-24T14:36:21.813431" elapsed="1.794405"/>
+</kw>
+<kw name="Verificar se o resultado da pesquisa contém o texto &quot;GALAXY TAB S10 FE&quot;" owner="amazon_resources" source_name="Verificar se o resultado da pesquisa contém o texto &quot;${PRODUCT}&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//span[contains(text(),'Tablet Samsung Galaxy Tab S10 FE, Cinza, 128GB, 8G')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T14:36:23.608833" elapsed="0.044522"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:23.679356" level="INFO">Element '//span[contains(text(),'Tablet Samsung Galaxy Tab S10 FE, Cinza, 128GB, 8G')]' is displayed.</msg>
+<arg>locator=//span[contains(text(),'Tablet Samsung Galaxy Tab S10 FE, Cinza, 128GB, 8G')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T14:36:23.653355" elapsed="0.026001"/>
+</kw>
+<status status="PASS" start="2025-06-24T14:36:23.608833" elapsed="0.071506"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-24T14:36:24.040368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-24T14:36:23.682343" elapsed="0.359028"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-24T14:36:24.041371" elapsed="2.340405"/>
+</kw>
+<status status="PASS" start="2025-06-24T14:36:23.681340" elapsed="2.700436"/>
+</kw>
+<doc>Este teste verifica a pesquisa de um produto no site Amazon.com.br
+e verifica se o produto pesquisado é exibido na tela de resultados</doc>
+<tag>busca_produto</tag>
+<tag>produto</tag>
+<tag>xbox</tag>
+<status status="PASS" start="2025-06-24T14:36:16.568388" elapsed="9.813388"/>
+</test>
+<status status="PASS" start="2025-06-24T14:36:16.140740" elapsed="10.243036"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">busca_produto</stat>
+<stat pass="1" fail="0" skip="0">produto</stat>
+<stat pass="1" fail="0" skip="0">xbox</stat>
+</tag>
+<suite>
+<stat name="Amazon Tests" id="s1" pass="1" fail="0" skip="0">Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
